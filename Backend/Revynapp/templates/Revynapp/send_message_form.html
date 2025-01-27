@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Send Message</h1>
+
+    <form id="sendMessageForm" method="POST" action="{% url 'send_message' %}">
+        {% csrf_token %}
+        <label for="receiver_id">Receiver ID:</label>
+        <input type="text" name="receiver_id" placeholder="Receiver ID" required /><br>
+        
+        <label for="message">Message:</label>
+        <textarea name="message" placeholder="Type your message" required></textarea><br>
+        
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div id="messages"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Function to fetch messages
+            function fetchMessages() {
+                $.ajax({
+                    url: '/chat/messages/',  // URL to retrieve messages
+                    method: 'GET',
+                    success: function(data) {
+                        $('#messages').empty();
+                        data.forEach(function(message) {
+                            $('#messages').append('<p>' + message.sender + ': ' + message.content + '</p>');
+                        });
+                    },
+                    error: function(xhr) {
+                        console.error("Error fetching messages:", xhr.responseJSON);
+                    }
+                });
+            }
+
+            // Fetch messages on page load
+            fetchMessages();
+
+            // Handle sending a message
+            $('#sendMessageForm').on('submit', function(e) {
+                e.preventDefault();
+
+                const formData = $(this).serialize();
+
+                $.ajax({
+                    url: '/chat/send/',  // URL to send message
+                    method: 'POST',
+                    data: formData,
+                    success: function(data) {
+                        $('#sendMessageForm')[0].reset();  // Reset the form
+                        fetchMessages();  // Refresh the messages
+                    },
+                    error: function(xhr) {
+                        alert(xhr.responseJSON.error || 'An error occurred.');  // Show error message
+                    }
+                });
+            });
+
+            // Polling to fetch new messages every 5 seconds
+            setInterval(fetchMessages, 5000);
+        });
+    </script>
+</body>
+</html>
