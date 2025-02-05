@@ -5,16 +5,17 @@ import ConsultationScheduler from '../components/ConsultationScheduler';
 import Image from 'next/image';
 
 export default function Home() {
-  const [showScheduler, setShowScheduler] = useState(false); // State for showing scheduler
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [showScheduler, setShowScheduler] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Toggle Scheduler visibility
-  const handleScheduleClick = () => {
-    setShowScheduler(!showScheduler);
-  };
+const handleScheduleClick = () => {
+    setShowScheduler(!showScheduler); // Toggle scheduler visibility
+    setIsModalOpen(true); // Open the modal
+};
 
-  const openModal = () => setIsModalOpen(true);  // Open modal
-  const closeModal = () => setIsModalOpen(false); // Close modal
+const closeModal = () => {
+    setIsModalOpen(false); // Close the modal
+};
 
   return (
     <>
@@ -49,14 +50,17 @@ export default function Home() {
           </p>
           <div>
             <button
-              onClick={openModal} // Open modal when clicked
-              className="demo-btn bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-800 font-semibold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105"
-            >
-              Schedule Consultation
-            </button>
-          </div>
-          {/* Modal Component */}
-          <ConsultationScheduler isOpen={isModalOpen} onClose={closeModal} />
+          onClick={openModal} // Open modal when clicked
+          className="demo-btn bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-800 font-semibold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105"
+        >
+          Schedule Consultation
+        </button>
+      </div>
+
+      {/* Modal Component */}
+      {isModalOpen && (
+        <ConsultationScheduler isOpen={isModalOpen} onClose={closeModal} />
+      )}
         </section>
 
        {/* About Us Section with Case Studies Background */}
