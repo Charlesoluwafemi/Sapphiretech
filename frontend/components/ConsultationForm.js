@@ -8,7 +8,7 @@ export default function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState(''); // State for error messages
   const [successMessage, setSuccessMessage] = useState(''); // State for success messages
-  const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
+  //const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
   const [isSubmitting, setIsSubmitting] = useState(false); // State to track submitting
 
   // Function to handle form submission
