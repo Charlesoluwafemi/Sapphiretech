@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -35,7 +36,7 @@ export default function Blog() {
             >
               {post.image && (
                 <div className="h-64 overflow-hidden">
-                  <img
+                  <Image
                     src={`http://localhost:8000${post.image}`}  // Ensure correct URL
                     alt={post.title}
                     className="w-full h-full object-cover" // Full width, cover height
