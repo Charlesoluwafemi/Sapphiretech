@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'], // Allow localhost for image sources
+    domains: ['localhost'],
   },
-  reactStrictMode: true, // Optional: Enforce best practices
+  reactStrictMode: true, // Ensure this is here
+  experimental: {}, // Ensure there are no experimental features breaking the build
 };
 
 export default nextConfig;
