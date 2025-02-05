@@ -8,7 +8,7 @@ export default function Home() {
   const [showScheduler, setShowScheduler] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-const handleScheduleClick = () => {
+const toggleScheduler = () => {
     setShowScheduler(!showScheduler); // Toggle scheduler visibility
     setIsModalOpen(true); // Open the modal
 };
