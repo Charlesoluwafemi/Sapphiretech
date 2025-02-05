@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Home() {
   const [showScheduler, setShowScheduler] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  //const [isModalOpen, setIsModalOpen] = useState(false);
 
   //const handleScheduleClick = () => {
     setShowScheduler(!showScheduler);
