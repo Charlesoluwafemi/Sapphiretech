@@ -4,6 +4,7 @@ import Head from 'next/head';
 import ReactMarkdown from 'react-markdown'; // For Markdown rendering
 import rehypeRaw from 'rehype-raw'; // To support raw HTML
 import remarkGfm from 'remark-gfm'; // For GitHub Flavored Markdown
+import Image from 'next/image';
 
 export default function Post() {
   const router = useRouter();
@@ -48,7 +49,7 @@ export default function Post() {
         {/* Display the image at the top of the blog post */}
         {post.image && (
           <div className="h-64 overflow-hidden">
-            <img
+            <Image
               src={post.image.startsWith('http') ? post.image : `http://localhost:8000${post.image}`}  // Ensure correct URL handling
               alt={post.title}
               className="w-full h-full object-cover" // Full width, cover height
