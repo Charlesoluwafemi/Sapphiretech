@@ -8,7 +8,7 @@ export default function Home() {
   const [showScheduler, setShowScheduler] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleScheduleClick = () => {
+  //const handleScheduleClick = () => {
     setShowScheduler(!showScheduler);
   };
 
@@ -16,10 +16,10 @@ export default function Home() {
   const closeModal = () => setIsModalOpen(false);
 
   // ✅ Use handleCloseModal properly
-  const handleCloseModal = () => {
-    setShowScheduler(false);
-    closeModal();
-  };
+  //const handleCloseModal = () => {
+    //setShowScheduler(false);
+    //closeModal();
+  //};
 
   return (
     <>
@@ -78,10 +78,10 @@ export default function Home() {
       From artificial intelligence and machine learning to blockchain and cloud computing, our diverse expertise allows us to tackle a wide range of projects. Our web and mobile app development services focus on creating user-friendly, scalable applications that enhance user experience and engagement. We work closely with our clients, understanding their needs and providing customized strategies that yield tangible results.
     </p>
     <p className="text-xl text-gray-400 mb-6 font-poppins">
-      Our commitment to excellence ensures that we remain a trusted partner in our clients’ journeys toward success. We are dedicated to staying ahead of industry trends and employing the latest technologies to deliver innovative solutions that set our clients apart from the competition.
+      Our commitment to excellence ensures that we remain a trusted partner in our clients&apos; journeys toward success. We are dedicated to staying ahead of industry trends and employing the latest technologies to deliver innovative solutions that set our clients apart from the competition.
     </p>
     <p className="text-xl text-gray-400 mb-6 font-poppins">
-      Join us as we continue to push the boundaries of what's possible. Together, we can harness the power of technology to drive innovation, enhance productivity, and create a brighter future for your business. Discover the Revyntech difference and let us help you achieve your goals with our unparalleled expertise and dedication.
+      Join us as we continue to push the boundaries of what&apos;s possible. Together, we can harness the power of technology to drive innovation, enhance productivity, and create a brighter future for your business. Discover the Revyntech difference and let us help you achieve your goals with our unparalleled expertise and dedication.
     </p>
   </div>
 </section>
@@ -93,7 +93,7 @@ export default function Home() {
   <div className="max-w-7xl mx-auto px-4 text-center">
     <h2 className="text-4xl font-bold mb-12 text-gray-800">Trusted by Industry Leaders</h2>
     <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-      At Revyntech, we are proud to partner with some of the world’s most renowned companies, enabling us to deliver innovative solutions that drive growth and technological advancement across industries.
+      At Revyntech, we are proud to partner with some of the world&apos;s most renowned companies, enabling us to deliver innovative solutions that drive growth and technological advancement across industries.
     </p>
     <p className="text-lg text-gray-500 italic mb-12">
       Our collaborations with global giants allow us to provide cutting-edge services, helping businesses like yours stay ahead of the curve.
