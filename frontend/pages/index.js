@@ -272,9 +272,8 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="bg-gray-900 py-10 text-white text-center">
-          <p>&copy; {new Date().getFullYear()} Revyntech. All rights reserved.</p>
-        </footer>
-      </main>
-    </>
-  );
-};
+        <p>&copy; {new Date().getFullYear()} Revyntech. All rights reserved.</p>
+      </footer>
+    </main>
+  </>
+);
