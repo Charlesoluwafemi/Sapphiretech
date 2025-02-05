@@ -50,7 +50,7 @@ const closeModal = () => {
           </p>
           <div>
             <button
-          onClick={openModal} // Open modal when clicked
+          onClick={toggleScheduler} // Open modal when clicked
           className="demo-btn bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-800 font-semibold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105"
         >
           Schedule Consultation
