@@ -131,7 +131,7 @@ export default function MobileApp() {
 <section className="bg-gray-50 py-12 text-center">
   <h2 className="text-3xl font-semibold mb-6 text-gray-900">Our Portfolio</h2>
   <p className="mb-10 text-gray-700 max-w-xl mx-auto">
-    Explore our diverse range of successful projects, crafted with precision and creativity to meet our clients' unique needs.
+    Explore our diverse range of successful projects, crafted with precision and creativity to meet our clients&apos; unique needs.
   </p>
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
     {[
