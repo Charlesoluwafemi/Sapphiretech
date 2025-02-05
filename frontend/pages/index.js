@@ -2,23 +2,24 @@ import Navbar from '../components/Navbar';
 import { useState } from 'react';
 import Head from 'next/head';
 import ConsultationScheduler from '../components/ConsultationScheduler';
-import Modal from '../components/Modal';
+import Image from 'next/image';
 
 export default function Home() {
-  const [showScheduler, setShowScheduler] = useState(false); // State to control visibility of the scheduler
+  const [showScheduler, setShowScheduler] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleScheduleClick = () => {
-    setShowScheduler(!showScheduler); // Toggle the scheduler visibility
+    setShowScheduler(!showScheduler);
   };
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  // ✅ Use handleCloseModal properly
   const handleCloseModal = () => {
-    setShowScheduler(false); // Close the scheduler modal
+    setShowScheduler(false);
+    closeModal();
   };
-
 
   return (
     <>
@@ -99,19 +100,19 @@ export default function Home() {
     </p>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
       <div>
-        <img src="/images/Gogle.png" alt="Google" className="h-24 mx-auto" />
+        <Image src="/images/Gogle.png" alt="Google" className="h-24 mx-auto" />
         <p className="text-gray-700 mt-4">Google</p>
       </div>
       <div>
-        <img src="/images/samsung.png" alt="Samsung" className="h-24 mx-auto" />
+        <Image src="/images/samsung.png" alt="Samsung" className="h-24 mx-auto" />
         <p className="text-gray-700 mt-4">Samsung</p>
       </div>
       <div>
-        <img src="/images/amazon.png" alt="Amazon" className="h-24 mx-auto" />
+        <Image src="/images/amazon.png" alt="Amazon" className="h-24 mx-auto" />
         <p className="text-gray-700 mt-4">Amazon</p>
       </div>
       <div>
-        <img src="/images/tesla.jpg" alt="Tesla" className="h-24 mx-auto" />
+        <Image src="/images/tesla.jpg" alt="Tesla" className="h-24 mx-auto" />
         <p className="text-gray-700 mt-4">Tesla</p>
       </div>
     </div>
@@ -127,37 +128,37 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-12">Our Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white shadow-lg p-6 rounded-lg">
-                <img src="/images/webdev.jpg" alt="Web Development" className="h-25 mx-auto mb-4" />
+                <Image src="/images/webdev.jpg" alt="Web Development" className="h-25 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Web Development</h3>
                 <p>We build modern, responsive websites for businesses of all sizes.</p>
               </div>
               <div className="bg-white shadow-lg p-6 rounded-lg">
-                <img src="/images/appdev.png" alt="Mobile App Development" className="h-25 mx-auto mb-4" />
+                <Image src="/images/appdev.png" alt="Mobile App Development" className="h-25 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Mobile App Development</h3>
                 <p>Our team crafts sleek and user-friendly mobile applications.</p>
               </div>
               <div className="bg-white shadow-lg p-6 rounded-lg">
-                <img src="/images/blockchain.png" alt="Blockchain" className="h-25 mx-auto mb-4" />
+                <Image src="/images/blockchain.png" alt="Blockchain" className="h-25 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Blockchain Development</h3>
                 <p>We offer blockchain solutions for decentralized applications.</p>
               </div>
               <div className="bg-white shadow-lg p-6 rounded-lg">
-                <img src="/images/ai.jpeg" alt="AI Development" className="h-25 mx-auto mb-4" />
+                <Image src="/images/ai.jpeg" alt="AI Development" className="h-25 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">AI & Machine Learning</h3>
                 <p>Building AI-driven applications to revolutionize your business.</p>
               </div>
               <div className="bg-white shadow-lg p-6 rounded-lg">
-                <img src="/images/bot.jpg" alt="Bots" className="h-21 mx-auto mb-4" />
+                <Image src="/images/bot.jpg" alt="Bots" className="h-21 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Bots & Automation</h3>
                 <p>Creating bots to automate workflows and enhance productivity.</p>
               </div>
               <div className="bg-white shadow-lg p-6 rounded-lg">
-                <img src="/images/smartcontract.avif" alt="Smart Contract" className="h-25 mx-auto mb-4" />
+                <Image src="/images/smartcontract.avif" alt="Smart Contract" className="h-25 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Smart Contracts</h3>
                 <p>We design and implement secure smart contracts for your business.</p>
               </div>
               <div className="bg-white shadow-lg p-6 rounded-lg">
-                <img src="/images/Wallet1.png" alt="Crypto Wallet" className="h-25 mx-auto mb-4" />
+                <Image src="/images/Wallet1.png" alt="Crypto Wallet" className="h-25 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Crypto Wallet Development</h3>
                 <p>Secure cryptocurrency wallet development solutions.</p>
               </div>
@@ -242,26 +243,26 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Review 1 */}
               <div className="bg-gray-100 shadow-lg p-6 rounded-lg">
-                <img src="/images/man1.jpg" alt="Client 1" className="h-48 w-48 rounded-full mx-auto mb-4" />
+                <Image src="/images/man1.jpg" alt="Client 1" className="h-48 w-48 rounded-full mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">John Doe, CEO at FinTech Corp</h3>
                 <p className="text-gray-700">
-                  "Revyntech transformed our business with a custom blockchain solution. Their expertise and professionalism are unmatched!"
+                   &quot;Revyntech transformed our business with a custom blockchain solution. Their expertise and professionalism are unmatched! &quot;
                 </p>
               </div>
               {/* Review 2 */}
               <div className="bg-gray-100 shadow-lg p-12 rounded-lg">
-                <img src="/images/woman1.jpg" alt="Client 2" className="h-48 w-48 rounded-full mx-auto mb-4" />
+                <Image src="/images/woman1.jpg" alt="Client 2" className="h-48 w-48 rounded-full mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Jane Smith, Founder of HealthTech</h3>
                 <p className="text-gray-700">
-                  "The AI-powered solution Revyntech built for us significantly improved our workflow and patient care. Highly recommend!"
+                   &quot;The AI-powered solution Revyntech built for us significantly improved our workflow and patient care. Highly recommend! &quot;
                 </p>
               </div>
               {/* Review 3 */}
               <div className="bg-gray-100 shadow-lg p-6 rounded-lg">
-                <img src="/images/man2.jpg" alt="Client 3" className="h-48 w-48 rounded-full mx-auto mb-4" />
+                <Image src="/images/man2.jpg" alt="Client 3" className="h-48 w-48 rounded-full mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Emily Johnson, COO at RetailHub</h3>
                 <p className="text-gray-700">
-                  "Their e-commerce platform is fantastic! Our sales have increased by 50% thanks to their seamless user experience design."
+                   &quot;Their e-commerce platform is fantastic! Our sales have increased by 50% thanks to their seamless user experience design. &quot;
                 </p>
               </div>
             </div>
