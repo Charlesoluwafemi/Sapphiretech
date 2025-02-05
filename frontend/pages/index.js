@@ -276,3 +276,4 @@ const closeModal = () => {
     </main>
   </>
 );
+};
