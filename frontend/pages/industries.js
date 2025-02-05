@@ -19,7 +19,7 @@ const IndustriesPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold">Industries We Serve</h2>
-          <p className="text-lg text-gray-700 mt-4">Our tailored solutions cater to various industries. Whether you’re looking for innovative FinTech solutions or revolutionizing healthcare, we've got you covered.</p>
+          <p className="text-lg text-gray-700 mt-4">Our tailored solutions cater to various industries. Whether you&apos;re looking for innovative FinTech solutions or revolutionizing healthcare, we&apos;ve got you covered.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 container mx-auto">
