@@ -1,13 +1,13 @@
 // FetchMessages.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 const FetchMessages = ({ token }) => {
     const [messages, setMessages] = useState([]);
 
-    const fetchMessages = async () => {
+    const fetchMessages = useCallback(async () => {
         const response = await fetch('http://127.0.0.1:8000/chat/messages/', {
             headers: {
-                'Authorization': `Bearer ${token}`, // Include your auth token
+                'Authorization': `Bearer ${token}`,
             },
         });
 
@@ -17,11 +17,11 @@ const FetchMessages = ({ token }) => {
         } else {
             console.error('Failed to fetch messages');
         }
-    };
+    }, [token]); // Memoize the fetchMessages function
 
     useEffect(() => {
         fetchMessages();
-    }, []); // Fetch messages when the component mounts
+    }, [fetchMessages]); // Now no warning!
 
     return (
         <div>
@@ -36,3 +36,4 @@ const FetchMessages = ({ token }) => {
 };
 
 export default FetchMessages;
+
