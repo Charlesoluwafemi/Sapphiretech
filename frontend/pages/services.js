@@ -1,5 +1,6 @@
 // pages/services.js (Our Services Page)
 import React from 'react';
+import Image from 'next/image';
 
 const ServicesPage = () => {
   return (
@@ -25,32 +26,32 @@ const ServicesPage = () => {
           <h2 className="text-4xl font-bold text-blue-600 mb-12">What We Offer</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             <div className="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition-shadow">
-              <img className="w-18 h-18 mx-auto mb-4" src="/images/webdev.jpg" alt="Website Development" />
+              <Image className="w-18 h-18 mx-auto mb-4" src="/images/webdev.jpg" alt="Website Development" />
               <h3 className="text-2xl font-semibold text-blue-600 mb-2">Website Development</h3>
               <p className="text-gray-700">We provide full-cycle web development services that align with your business objectives.</p>
             </div>
             <div className="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition-shadow">
-              <img className="w-18 h-18 mx-auto mb-4" src="/images/app1.png" alt="Mobile App Development" />
+              <Image className="w-18 h-18 mx-auto mb-4" src="/images/app1.png" alt="Mobile App Development" />
               <h3 className="text-2xl font-semibold text-blue-600 mb-2">Mobile App Development</h3>
               <p className="text-gray-700">Delivering mobile applications that boost engagement and performance.</p>
             </div>
             <div className="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition-shadow">
-              <img className="w-18 h-18 mx-auto mb-4" src="/images/automation.png" alt="Automation Software" />
+              <Image className="w-18 h-18 mx-auto mb-4" src="/images/automation.png" alt="Automation Software" />
               <h3 className="text-2xl font-semibold text-blue-600 mb-2">Automation Software</h3>
               <p className="text-gray-700">Our automation solutions help streamline business processes and reduce costs.</p>
             </div>
             <div className="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition-shadow">
-              <img className="w-18 h-18 mx-auto mb-4" src="/images/blockchain1.jpg" alt="Blockchain Development" />
+              <Image className="w-18 h-18 mx-auto mb-4" src="/images/blockchain1.jpg" alt="Blockchain Development" />
               <h3 className="text-2xl font-semibold text-blue-600 mb-2">Blockchain Development</h3>
               <p className="text-gray-700">Providing cutting-edge blockchain development services for decentralized solutions.</p>
             </div>
             <div className="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition-shadow">
-              <img className="w-18 h-18 mx-auto mb-4" src="/images/chatbot.jpg" alt="Chatbot Development" />
+              <Image className="w-18 h-18 mx-auto mb-4" src="/images/chatbot.jpg" alt="Chatbot Development" />
               <h3 className="text-2xl font-semibold text-blue-600 mb-2">Chatbot Development</h3>
               <p className="text-gray-700">Creating intelligent chatbots to enhance customer engagement and automate communication.</p>
             </div>
             <div className="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition-shadow">
-              <img className="w-18 h-18 mx-auto mb-4" src="/images/ai1.jpg" alt="AI Solutions" />
+              <Image className="w-18 h-18 mx-auto mb-4" src="/images/ai1.jpg" alt="AI Solutions" />
               <h3 className="text-2xl font-semibold text-blue-600 mb-2">AI Solutions</h3>
               <p className="text-gray-700">Offering AI-powered solutions that drive innovation and improve business outcomes.</p>
             </div>
