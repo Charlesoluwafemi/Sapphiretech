@@ -1,5 +1,6 @@
 // pages/about.js (About Us Page)
 import React from 'react';
+import Image from 'next/image'
 
 const AboutPage = () => {
   return (
@@ -54,7 +55,7 @@ const AboutPage = () => {
     </p>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
       <div className="bg-gray-50 p-6 shadow-lg rounded-lg">
-        <img 
+        <Image
           className="w-48 h-48 mx-auto mb-4 rounded-full object-cover" 
           src="/images/member1.jpg" 
           alt="Team Member 1" 
@@ -67,7 +68,7 @@ const AboutPage = () => {
         </p>
       </div>
       <div className="bg-gray-50 p-6 shadow-lg rounded-lg">
-        <img 
+        <Image 
           className="w-48 h-48 mx-auto mb-4 rounded-full object-cover" 
           src="/images/member2.jpg" 
           alt="Team Member 2" 
@@ -80,7 +81,7 @@ const AboutPage = () => {
         </p>
       </div>
       <div className="bg-gray-50 p-6 shadow-lg rounded-lg">
-        <img 
+        <Image 
           className="w-48 h-48 mx-auto mb-4 rounded-full object-cover" 
           src="/images/member3.jpg" 
           alt="Team Member 3" 
@@ -93,7 +94,7 @@ const AboutPage = () => {
         </p>
       </div>
       <div className="bg-gray-50 p-6 shadow-lg rounded-lg">
-        <img 
+        <Image 
           className="w-48 h-48 mx-auto mb-4 rounded-full object-cover" 
           src="/images/member4.jpg" 
           alt="Team Member 4" 
