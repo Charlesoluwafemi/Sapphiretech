@@ -81,7 +81,7 @@ const ConsultationScheduler = ({ isOpen, onClose }) => {
           <>
             <h2 className="text-2xl font-bold text-center text-white mb-6">Request a Demo</h2>
             <p className="text-center text-gray-200 mb-8">
-              Schedule Consultation and we'll reach out to you.
+              Schedule Consultation and we&apos;ll reach out to you.
             </p>
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div>
