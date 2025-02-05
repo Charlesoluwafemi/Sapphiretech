@@ -5,21 +5,16 @@ import ConsultationScheduler from '../components/ConsultationScheduler';
 import Image from 'next/image';
 
 export default function Home() {
-  const [showScheduler, setShowScheduler] = useState(false);
-  //const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showScheduler, setShowScheduler] = useState(false); // State for showing scheduler
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
 
-  //const handleScheduleClick = () => {
+  // Toggle Scheduler visibility
+  const handleScheduleClick = () => {
     setShowScheduler(!showScheduler);
   };
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  // ✅ Use handleCloseModal properly
-  //const handleCloseModal = () => {
-    //setShowScheduler(false);
-    //closeModal();
-  //};
+  const openModal = () => setIsModalOpen(true);  // Open modal
+  const closeModal = () => setIsModalOpen(false); // Close modal
 
   return (
     <>
@@ -37,33 +32,33 @@ export default function Home() {
         <Navbar />
 
         {/* Hero Section with Gradient Background */}
-  <section className="bg-cover bg-center h-screen flex flex-col justify-center items-center text-white"
-  style={{
-    backgroundImage: "url('/images/coding1.jpg')",  // Replace with your image path
-    opacity: 0.8,
-  }}>
-  <h1 className="text-6xl font-bold mb-4 text-white bg-gradient-to-r from-yellow-300 via-red-500 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">
-    Software Development Services
-  </h1>
-  <h2 className="text-4xl font-bold mb-4 text-yellow-200 drop-shadow-lg">Custom Web App Development Services</h2>
-  <p className="text-3xl mb-4 text-purple-200 drop-shadow-lg" style={{ fontFamily: 'Poppins, sans-serif' }}>
-    We develop Software Solutions, Advanced AI Applications
-  </p>
-  <p className="text-3xl mb-4 text-teal-200 drop-shadow-lg">
-    And intuitive Web and Mobile Apps to meet your Business needs.
-  </p>
-  <div>
-  <button 
-            onClick={openModal} // Open modal when clicked
-            className="demo-btn bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-800 font-semibold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105"
-          >
-            Schedule Consultation
-          </button>
-        </div>
-        {/* Modal Component */}
-        <ConsultationScheduler isOpen={isModalOpen} onClose={closeModal} />
-      
-</section>
+        <section className="bg-cover bg-center h-screen flex flex-col justify-center items-center text-white"
+          style={{
+            backgroundImage: "url('/images/coding1.jpg')",  // Replace with your image path
+            opacity: 0.8,
+          }}>
+          <h1 className="text-6xl font-bold mb-4 text-white bg-gradient-to-r from-yellow-300 via-red-500 to-purple-600 bg-clip-text text-transparent drop-shadow-lg">
+            Software Development Services
+          </h1>
+          <h2 className="text-4xl font-bold mb-4 text-yellow-200 drop-shadow-lg">Custom Web App Development Services</h2>
+          <p className="text-3xl mb-4 text-purple-200 drop-shadow-lg" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            We develop Software Solutions, Advanced AI Applications
+          </p>
+          <p className="text-3xl mb-4 text-teal-200 drop-shadow-lg">
+            And intuitive Web and Mobile Apps to meet your Business needs.
+          </p>
+          <div>
+            <button
+              onClick={openModal} // Open modal when clicked
+              className="demo-btn bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-800 font-semibold py-4 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105"
+            >
+              Schedule Consultation
+            </button>
+          </div>
+          {/* Modal Component */}
+          <ConsultationScheduler isOpen={isModalOpen} onClose={closeModal} />
+        </section>
+
        {/* About Us Section with Case Studies Background */}
 <section className="bg-gray-900 py-20 flex flex-col justify-start items-center text-white">
   <div className="max-w-5xl mx-auto text-center px-6 lg:px-0">
