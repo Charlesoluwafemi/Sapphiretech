@@ -36,7 +36,7 @@ export default function MobileApp() {
       Proud Partners of Leading Global Brands
     </h2>
     <p className="text-lg text-gray-700 mb-12">
-      We are honored to have worked with some of the world's most innovative and successful companies. Join our growing family of clients, and let’s build something amazing together.
+      We are honored to have worked with some of the world&apos;s most innovative and successful companies. Join our growing family of clients, and let&apos;s build something amazing together.
     </p>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
       {[
